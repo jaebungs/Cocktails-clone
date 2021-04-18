@@ -16,7 +16,7 @@ app.use('/cocktails', cocktailsRoutes);
 // app.use('/user', userRoutes);
 // app.use('/mybar', mybarRoutes);
 
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
   res.status(err.status ? err.status : 404).json({ message: err.message, error: err.stack });
 });
 
