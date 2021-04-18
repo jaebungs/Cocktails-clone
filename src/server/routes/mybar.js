@@ -1,9 +1,9 @@
-import express from 'express';
+// import express from 'express';
 
-const router = express.Router();
-// routes for '/mybar'
+// const router = express.Router();
+// // routes for '/mybar'
 
-router.post('/', addToMyBar);
-router.delete('/', removeFromMyBar);
+// router.post('/', addToMyBar);
+// router.delete('/', removeFromMyBar);
 
-export default router;
+// export default router;
