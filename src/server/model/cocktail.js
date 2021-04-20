@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
@@ -16,4 +16,4 @@ const cocktailSchema = new Schema(
 
 const Cocktail = mongoose.model('Cocktail', cocktailSchema);
 
-module.exports = Cocktail;
+export default Cocktail;

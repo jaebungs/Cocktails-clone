@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import cocktailsRoutes from './routes/cocktails';
+import accountRoutes from './routes/account';
 
 dotenv.config();
 const { PORT, MONGO_URL } = process.env;
@@ -13,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/cocktails', cocktailsRoutes);
-// app.use('/user', userRoutes);
+app.use('/account', accountRoutes);
 // app.use('/mybar', mybarRoutes);
 
 app.use((err, req, res) => {
