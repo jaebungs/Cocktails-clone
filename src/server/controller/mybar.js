@@ -1,42 +1,26 @@
-// const User = require('../models/user');
+import AppError from '../common/AppError';
+import * as myBarService from '../service/myBar';
+import * as cocktailService from '../service/cocktails';
 
-// const addToMyBar = async (req, res) => {
-//   const { id, _id, name, ingredients, instruction, garnish } = req.body;
+export const getMyBarList = async (req, res, next) => {
+  try {
+    const account = await myBarService.getMyBar(req.body.email);
+    if (!account) throw new AppError('Cannot get the bookmark lists.');
+    const recipes = await account.myBar.forEach(recipe => {
+      cocktailService.getCocktailById(recipe.id);
+    });
+    res.json(recipes);
+  } catch (err) {
+    next(err);
+  }
+};
+
+// export const addToMyBarById = async (req, res, next) => {
 //   try {
-//     await User.findByIdAndUpdate(
-//       id,
-//       { $addToSet: { bar: { _id, name, ingredients, instruction, garnish } } },
-//       { new: true },
-//       (err, result) => {
-//         if (err) {
-//           res.status(400).json({ message: 'Adding to My Bar failed.' });
-//           console.log(err);
-//         }
-//         if (result) {
-//           res.status(200).json({ ...result });
-//         }
-//       },
-//     );
-//   } catch (error) {
-//     res.status(500).json({ message: 'Adding to mybar Error.' });
-//   }
-// };
-
-// const removeFromMyBar = async (req, res) => {
-//   const { _id, id } = req.body;
-
-//   try {
-//     await User.findByIdAndUpdate(id, { $pull: { bar: { _id } } }, { new: true }, (err, result) => {
-//       if (err) {
-//         res.status(400).json({ message: 'Remove from my bar failed' });
-//       }
-//       if (result) {
-//         res.status(200).json({ ...result });
-//       }
-//     });
+//     const myBar = await myBarService.addToMyBarById(req);
 //   } catch (err) {
-//     console.log(err);
+//     next(err);
 //   }
 // };
 
-// module.exports = { addToMyBar, removeFromMyBar };
+// export const removeFromMyBarById = async (req, res, next) => {};

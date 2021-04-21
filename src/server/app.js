@@ -4,6 +4,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import cocktailsRoutes from './routes/cocktails';
 import accountRoutes from './routes/account';
+import mybarRoutes from './routes/myBar';
 
 dotenv.config();
 const { PORT, MONGO_URL } = process.env;
@@ -15,7 +16,7 @@ app.use(express.json());
 
 app.use('/cocktails', cocktailsRoutes);
 app.use('/account', accountRoutes);
-// app.use('/mybar', mybarRoutes);
+app.use('/mybar', mybarRoutes);
 
 app.use((err, req, res) => {
   res.status(err.status ? err.status : 404).json({ message: err.message, error: err.stack });
