@@ -24,7 +24,6 @@ export const getCocktailById = async (req, res, next) => {
 export const createCocktail = async (req, res, next) => {
   try {
     const cocktail = await cocktailService.createCocktail(req.body);
-    console.log(req.body);
     if (!cocktail) throw new AppError('Cocktail data cannot be created');
     res.json(cocktail);
   } catch (err) {
