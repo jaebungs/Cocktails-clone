@@ -1,15 +1,11 @@
 import AppError from '../common/AppError';
-import * as myBarService from '../service/myBar';
-import * as cocktailService from '../service/cocktails';
+import * as accountService from '../service/myBar';
 
-export const getMyBarList = async (req, res, next) => {
+export const getMyBarFromAccount = async (req, res, next) => {
   try {
-    const account = await myBarService.getMyBar(req.body.email);
-    if (!account) throw new AppError('Cannot get the bookmark lists.');
-    const recipes = await account.myBar.forEach(recipe => {
-      cocktailService.getCocktailById(recipe.id);
-    });
-    res.json(recipes);
+    const account = await accountService.getAccountByEmail(req.body.email);
+    if (!account) return new AppError('Cannot find the account');
+    res.json(account.myBar);
   } catch (err) {
     next(err);
   }

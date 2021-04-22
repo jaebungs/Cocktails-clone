@@ -1,16 +1,27 @@
 import AppError from '../common/AppError';
 import * as accountService from '../service/account';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const getAccountByEmail = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
+    // if account data is not found
     const account = await accountService.getAccountByEmail(email);
     if (!account) throw new AppError('Cannot find the account.');
-    if (account.password === password) {
-      res.json({ message: 'Login Success.' });
+
+    // if password is correct return token, if not throw error.
+    const isPasswordCorrect = await bcrypt.compare(password, account.password);
+    if (isPasswordCorrect) {
+      const token = jwt.sign({ email, id: account.id }, process.env.JWT_SECRET, {
+        expiresIn: process.env.JWT_EXPIRESIN,
+      });
+      res.json({ token });
     } else {
-      throw new AppError('Password does not match.');
+      return new AppError('Incorrect password.');
     }
   } catch (err) {
     next(err);
@@ -19,7 +30,12 @@ export const getAccountByEmail = async (req, res, next) => {
 
 export const createAccount = async (req, res, next) => {
   try {
-    const account = await accountService.createAccount(req.body);
+    const encryptPassword = await bcrypt.hashSync(req.body.password, 10);
+    const accountData = {
+      ...req.body,
+      password: encryptPassword,
+    };
+    const account = await accountService.createAccount(accountData);
     if (!account) throw new AppError('Cannot create a new account.');
     res.json(account);
   } catch (err) {
