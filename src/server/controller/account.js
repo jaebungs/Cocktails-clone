@@ -19,7 +19,7 @@ export const getAccountByEmail = async (req, res, next) => {
       const token = jwt.sign({ email, id: account.id }, process.env.JWT_SECRET, {
         expiresIn: process.env.JWT_EXPIRESIN,
       });
-      res.json({ token });
+      res.json({ account, token });
     } else {
       return new AppError('Incorrect password.');
     }
@@ -30,7 +30,7 @@ export const getAccountByEmail = async (req, res, next) => {
 
 export const createAccount = async (req, res, next) => {
   try {
-    const encryptPassword = await bcrypt.hashSync(req.body.password, 10);
+    const encryptPassword = bcrypt.hashSync(req.body.password, 10);
     const accountData = {
       ...req.body,
       password: encryptPassword,

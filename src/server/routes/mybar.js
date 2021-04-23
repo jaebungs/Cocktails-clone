@@ -1,12 +1,10 @@
 import express from 'express';
-// import { authToken } from '../middleware/authToken';
-// import * as myBarController from '../controller/myBar';
+import { authToken } from '../middleware/authToken';
+import * as mybarController from '../controller/mybar';
 
 const router = express.Router();
 
-// router.get('/', authToken, myBarController.getMyBarList);
-// router.put('/add', myBarController.addToMyBarById);
-// router.put('/remove', myBarController.removeFromMyBarById);
-// $2a$10$DNVq0xyEfhNIDoCiRhb3teOAmnNUsvgo/4Z23r92NAUXrMr9yeM4.
+router.get('/', authToken, mybarController.getMyBarFromAccount);
+router.put('/update', authToken, mybarController.updateMyBar);
 
 export default router;

@@ -12,7 +12,7 @@ const accountSchema = new Schema(
       lowercase: true,
     },
     password: String,
-    bar: [String],
+    myBar: [String],
   },
   {
     timestamps: true,
