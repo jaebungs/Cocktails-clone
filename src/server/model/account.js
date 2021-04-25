@@ -12,7 +12,8 @@ const accountSchema = new Schema(
       lowercase: true,
     },
     password: String,
-    bar: [String],
+    // make plural bc it's an array.
+    myBar: [{ type: Schema.Types.ObjectId, ref: 'Cocktails' }],
   },
   {
     timestamps: true,

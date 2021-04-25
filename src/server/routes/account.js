@@ -1,11 +1,11 @@
 import express from 'express';
-import * as accountService from '../controller/account';
+import * as accountController from '../controller/account';
 
 const router = express.Router();
 
-router.get('/', accountService.getAccountByEmail);
-router.post('/', accountService.createAccount);
-router.put('/:id', accountService.updateAccountById);
-router.delete('/:id', accountService.deleteAccountById);
+router.get('/', accountController.getAccountByEmail);
+router.post('/', accountController.createAccount);
+router.put('/:id', accountController.updateAccountById);
+router.delete('/:id', accountController.deleteAccountById);
 
 export default router;
