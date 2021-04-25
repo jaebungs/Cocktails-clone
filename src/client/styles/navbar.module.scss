@@ -1,0 +1,53 @@
+.homePageContainer {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    margin: 0 7rem;
+    flex-flow: wrap;
+    a {
+        text-decoration: none;
+        color: #000;
+        letter-spacing: 3px;
+    }
+    a:hover {
+        font-weight: 700;
+    }
+    a::before {
+        display: block;
+        content: attr(item);
+        font-weight: bold;
+        height: 0;
+        visibility: hidden;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin: 1rem;
+    }
+    
+    .navbarItemsContainer {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+    .navbarRightContainer {
+        display: flex;
+        margin-left: auto;
+        order: 2;
+    }
+    .navbarItem {
+        font-size: 1.3rem;
+        max-width: 7rem;
+        margin: 0.5rem;
+    }
+
+    .navbarLogin {
+        font-size: 1.3rem;
+        border: 2px solid #000;
+        display: block;
+        padding: 0.5rem 1rem;
+        max-width: 5rem;
+        box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    
+    }
+}

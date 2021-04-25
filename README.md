@@ -1,2 +1,3 @@
 # Better Cocktail App
-Rebuilding the Cocktail App with ....  
+Better version of MymyCocktail App. 
+Plan to add more features, and change according to good practices.

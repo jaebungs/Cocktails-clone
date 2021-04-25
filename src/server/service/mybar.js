@@ -5,5 +5,5 @@ export const getMyBarFromAccount = email => {
 };
 
 export const updateMyBar = (id, myBarList) => {
-  return Account.updateOne({ id }, { $set: { 'myBar': myBarList } });
+  return Account.updateOne({ id }, { $set: { myBar: myBarList } });
 };

@@ -5,10 +5,9 @@ dotenv.config();
 
 export const authToken = async (req, res, next) => {
   try {
-    const authHeader = req.header['Authorization'];
+    const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
-    console.log(req.header);
-    if (token === null) return new AppError('Cannot find the authToken.');
+    if (!token) return new AppError('Cannot find the authToken.');
 
     let decodedToken = jwt.verify(token, process.env.JWT_SECRET);
     req.userId = decodedToken;

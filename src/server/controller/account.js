@@ -45,7 +45,12 @@ export const createAccount = async (req, res, next) => {
 
 export const updateAccountById = async (req, res, next) => {
   try {
-    const account = await accountService.updateAccountById(req.params.id, req.body);
+    const encryptPassword = bcrypt.hashSync(req.body.password, 10);
+    const editedAccountData = {
+      ...req.body,
+      password: encryptPassword,
+    };
+    const account = await accountService.updateAccountById(req.params.id, editedAccountData);
     if (!account) throw new AppError('Cannot create a new account.');
     res.json(account);
   } catch (err) {
