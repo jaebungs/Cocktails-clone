@@ -16,15 +16,28 @@
 
 .searchContainer {
     text-align: center;
-    padding: 0 4rem;
+    padding: 0 4.5rem;
+
+    .h2 {
+        font-size: 2.2rem;
+        margin:  5px 0;
+    }
+    
+    .h3 {
+        font-size: 1.4rem;
+        font-weight: normal;
+        margin: 0 0 10px 0;
+    }
+
+    .searchInput {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .searchBtn {
+        font-size: 1rem;
+        margin: 0.5rem;
+        padding: 0.5rem 0.8rem;
+    }
 }
 
-.h2 {
-    font-size: 2.2rem;
-    margin:  5px 0;
-}
-
-.h3 {
-    font-size: 1.5rem;
-    margin: 0 0 10px 0;
-}
