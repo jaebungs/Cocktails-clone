@@ -2,8 +2,5 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
-  "/library": "pages/library.js",
-  "/mybar": "pages/mybar.js",
-  "/": "pages/index.js"
+  "/library": "pages/library.js"
 }
