@@ -1,11 +1,12 @@
 import React from 'react';
+import styled from '../styles/recipeCard.module.scss';
 
 const RecipeItem = ({ recipe }) => {
   return (
-    <div>
+    <div className={styled.recipeCard}>
       <h3>{recipe.name}</h3>
-      <p>{recipe.ingredients}</p>
-      <p>{recipe.instruction}</p>
+      <p>Ingredients: {recipe.ingredients}</p>
+      <p>Instruction: {recipe.instruction}</p>
     </div>
   );
 };

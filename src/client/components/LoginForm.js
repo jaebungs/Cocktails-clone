@@ -10,7 +10,7 @@ const LoginForm = () => {
           <input className={styled.formInput} placeholder="Enter Email." />
         </label>
         <label>
-          password:
+          passwogrd:
           <input className={styled.formInput} placeholder="Enter Password." />
         </label>
         <div className={styled.buttonsContainer}>

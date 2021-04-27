@@ -1,54 +1,64 @@
 webpackHotUpdate_N_E("pages/library",{
 
-/***/ "./pages/library.js":
-/*!**************************!*\
-  !*** ./pages/library.js ***!
-  \**************************/
-/*! exports provided: __N_SSG, default */
+/***/ "./components/RecipeItem.js":
+/*!**********************************!*\
+  !*** ./components/RecipeItem.js ***!
+  \**********************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__N_SSG", function() { return __N_SSG; });
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_RecipeLists__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/RecipeLists */ "./components/RecipeLists.js");
+/* harmony import */ var _styles_recipeCard_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/recipeCard.module.scss */ "./styles/recipeCard.module.scss");
+/* harmony import */ var _styles_recipeCard_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_recipeCard_module_scss__WEBPACK_IMPORTED_MODULE_2__);
 
 
-var _jsxFileName = "C:\\Users\\jaebu\\Desktop\\cocktail-clone\\src\\client\\pages\\library.js",
+var _jsxFileName = "C:\\Users\\jaebu\\Desktop\\cocktail-clone\\src\\client\\components\\RecipeItem.js",
     _this = undefined;
 
 
 
 
-var library = function library(_ref) {
-  var recipes = _ref.recipes;
-  console.log(recipes);
+var RecipeItem = function RecipeItem(_ref) {
+  var recipe = _ref.recipe;
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("div", {
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("h2", {
-      children: "Library Page"
+    className: _styles_recipeCard_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.recipeCard,
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("h3", {
+      children: recipe.name
     }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 7
+    }, _this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("p", {
+      children: ["Ingredients: ", recipe.ingredients]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 7
+    }, _this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("p", {
+      children: ["Instruction: ", recipe.instruction]
+    }, void 0, true, {
       fileName: _jsxFileName,
       lineNumber: 9,
-      columnNumber: 7
-    }, _this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(_components_RecipeLists__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      recipes: recipes
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 10,
       columnNumber: 7
     }, _this)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 8,
+    lineNumber: 6,
     columnNumber: 5
   }, _this);
 };
 
-var __N_SSG = true;
-/* harmony default export */ __webpack_exports__["default"] = (library);
+_c = RecipeItem;
+/* harmony default export */ __webpack_exports__["default"] = (RecipeItem);
+
+var _c;
+
+$RefreshReg$(_c, "RecipeItem");
 
 ;
     var _a, _b;
@@ -110,4 +120,4 @@ var __N_SSG = true;
 /***/ })
 
 })
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9fTl9FLy4vcGFnZXMvbGlicmFyeS5qcyJdLCJuYW1lcyI6WyJsaWJyYXJ5IiwicmVjaXBlcyIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUVBOztBQUVBLElBQU1BLE9BQU8sR0FBRyxTQUFWQSxPQUFVLE9BQWlCO0FBQUEsTUFBZEMsT0FBYyxRQUFkQSxPQUFjO0FBQy9CQyxTQUFPLENBQUNDLEdBQVIsQ0FBWUYsT0FBWjtBQUNBLHNCQUNFO0FBQUEsNEJBQ0U7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFERixlQUVFLHFFQUFDLCtEQUFEO0FBQWEsYUFBTyxFQUFFQTtBQUF0QjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBRkY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBREY7QUFNRCxDQVJEOzs7QUFVZUQsc0VBQWYiLCJmaWxlIjoic3RhdGljL3dlYnBhY2svcGFnZXMvbGlicmFyeS4xZWQ3NWI4ZDZmNDBmOWQ3NjUyZC5ob3QtdXBkYXRlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IHNlcnZlciB9IGZyb20gJy4uL2NvbmZpZ3MvaW5kZXgnO1xuaW1wb3J0IFJlY2lwZUxpc3RzIGZyb20gJy4uL2NvbXBvbmVudHMvUmVjaXBlTGlzdHMnO1xuXG5jb25zdCBsaWJyYXJ5ID0gKHsgcmVjaXBlcyB9KSA9PiB7XG4gIGNvbnNvbGUubG9nKHJlY2lwZXMpO1xuICByZXR1cm4gKFxuICAgIDxkaXY+XG4gICAgICA8aDI+TGlicmFyeSBQYWdlPC9oMj5cbiAgICAgIDxSZWNpcGVMaXN0cyByZWNpcGVzPXtyZWNpcGVzfSAvPlxuICAgIDwvZGl2PlxuICApO1xufTtcblxuZXhwb3J0IGRlZmF1bHQgbGlicmFyeTtcblxuZXhwb3J0IGNvbnN0IGdldFN0YXRpY1Byb3BzID0gYXN5bmMgKCkgPT4ge1xuICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaChgJHtzZXJ2ZXJ9L2NvY2t0YWlsc2ApO1xuICBjb25zdCByZWNpcGVzID0gYXdhaXQgcmVzLmpzb24oKTtcblxuICByZXR1cm4ge1xuICAgIHByb3BzOiB7IHJlY2lwZXMgfSxcbiAgfTtcbn07XG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9fTl9FLy4vY29tcG9uZW50cy9SZWNpcGVJdGVtLmpzIl0sIm5hbWVzIjpbIlJlY2lwZUl0ZW0iLCJyZWNpcGUiLCJzdHlsZWQiLCJyZWNpcGVDYXJkIiwibmFtZSIsImluZ3JlZGllbnRzIiwiaW5zdHJ1Y3Rpb24iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUNBOztBQUVBLElBQU1BLFVBQVUsR0FBRyxTQUFiQSxVQUFhLE9BQWdCO0FBQUEsTUFBYkMsTUFBYSxRQUFiQSxNQUFhO0FBQ2pDLHNCQUNFO0FBQUssYUFBUyxFQUFFQyxxRUFBTSxDQUFDQyxVQUF2QjtBQUFBLDRCQUNFO0FBQUEsZ0JBQUtGLE1BQU0sQ0FBQ0c7QUFBWjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBREYsZUFFRTtBQUFBLGtDQUFpQkgsTUFBTSxDQUFDSSxXQUF4QjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFGRixlQUdFO0FBQUEsa0NBQWlCSixNQUFNLENBQUNLLFdBQXhCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUhGO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQURGO0FBT0QsQ0FSRDs7S0FBTU4sVTtBQVVTQSx5RUFBZiIsImZpbGUiOiJzdGF0aWMvd2VicGFjay9wYWdlcy9saWJyYXJ5LjlmZjEwZGQ3OTVmZGQ4MWI4MjczLmhvdC11cGRhdGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHN0eWxlZCBmcm9tICcuLi9zdHlsZXMvcmVjaXBlQ2FyZC5tb2R1bGUuc2Nzcyc7XG5cbmNvbnN0IFJlY2lwZUl0ZW0gPSAoeyByZWNpcGUgfSkgPT4ge1xuICByZXR1cm4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPXtzdHlsZWQucmVjaXBlQ2FyZH0+XG4gICAgICA8aDM+e3JlY2lwZS5uYW1lfTwvaDM+XG4gICAgICA8cD5JbmdyZWRpZW50czoge3JlY2lwZS5pbmdyZWRpZW50c308L3A+XG4gICAgICA8cD5JbnN0cnVjdGlvbjoge3JlY2lwZS5pbnN0cnVjdGlvbn08L3A+XG4gICAgPC9kaXY+XG4gICk7XG59O1xuXG5leHBvcnQgZGVmYXVsdCBSZWNpcGVJdGVtO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==
