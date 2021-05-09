@@ -12,3 +12,9 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
+}

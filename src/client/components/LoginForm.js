@@ -15,7 +15,7 @@ const LoginForm = () => {
         </label>
         <div className={styled.buttonsContainer}>
           <button className={styled.formButton}>Login</button>
-          <p>Sign in with</p>
+          <p>Sign in with:</p>
           <button className={styled.formButton}>Google</button>
           <button className={styled.formButton}>Github</button>
           <button className={styled.formButton}>Facebook</button>
