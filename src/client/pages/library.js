@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { server } from '../configs/index';
+import { getCocktails } from '../redux/actions/cocktailAction';
 import RecipeLists from '../components/RecipeLists';
 
 const library = ({ recipes }) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCocktails());
+  }, []);
   console.log(recipes);
   return (
     <div>
