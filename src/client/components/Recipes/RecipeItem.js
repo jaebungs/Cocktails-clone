@@ -1,7 +1,18 @@
 import React from 'react';
-import styled from '../styles/recipeCard.module.scss';
+import Modal from 'react-modal';
+import styled from './recipeCard.module.scss';
 
 const RecipeItem = ({ recipe }) => {
+  const [modalIsOpen, setModalIsOpen ] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  }
+
   return (
     <div className={styled.recipeCard}>
       <h3>{recipe.name}</h3>

@@ -8,6 +8,10 @@ export const configs = {
       name: 'My Bar',
       href: '/mybar',
     },
+    {
+      name: 'API',
+      href: '/apiPage',
+    },
   ],
 };
 

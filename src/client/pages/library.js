@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { server } from '../configs/index';
 import { getCocktails } from '../redux/actions/cocktailAction';
-import RecipeLists from '../components/RecipeLists';
+import RecipeLists from '../components/Recipes/RecipeLists';
 
 const library = ({ recipes }) => {
   const dispatch = useDispatch();
