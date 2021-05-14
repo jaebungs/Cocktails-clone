@@ -10,7 +10,6 @@ const library = ({ recipes }) => {
   useEffect(() => {
     dispatch(getCocktails());
   }, []);
-  console.log(recipes);
   return (
     <div>
       <h2>Library Page</h2>
