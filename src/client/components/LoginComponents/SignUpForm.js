@@ -61,11 +61,8 @@ const SignUpForm = ({ input, handleSignUpOnClick, handleSignSubmit, handleInputO
             required
           />
         </label>
-        <div className={styled.buttonsContainer}>
-          <button className={styled.formButton} onClick={handleSignUpOnClick}>
-            Sign Up
-          </button>
-        </div>
+
+        <button className={styled.formButton}>Sign Up</button>
       </form>
       <p>Already have an account?</p>
       <button onClick={handleSignUpOnClick}>Click here to Sign in</button>

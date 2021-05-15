@@ -17,7 +17,7 @@ export const getAccountByEmail = async (req, res, next) => {
     const isPasswordCorrect = await bcrypt.compare(password, account.password);
     if (isPasswordCorrect) {
       const token = jwt.sign({ email, id: account.id }, process.env.JWT_SECRET, {
-        expiresIn: process.env.JWT_EXPIRESIN,
+        expiresIn: '7d',
       });
       res.json({ account, token });
     } else {
