@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
           enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
         });
 
-      // Documents의 initial props
+      // Documents initial props
       const initialProps = await Document.getInitialProps(ctx);
 
       return {

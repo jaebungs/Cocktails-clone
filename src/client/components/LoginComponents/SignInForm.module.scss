@@ -1,0 +1,21 @@
+.formContainer {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+
+    .formInput {
+        padding: 0.3rem 0.5rem;
+        margin: 0.2rem;
+    }
+
+    .formButton {
+        padding: 0.3rem 0.5rem;
+        margin: 0.2rem;
+    }
+}
+
+    
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+}
