@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import SignInForm from '../components/LoginComponents/SignInForm';
 import SignUpForm from '../components/LoginComponents/SignUpForm';
-import { signIn, createAccount } from '../helpers/loginHelpers';
+import { regularSignIn, createAccount } from '../redux/actions/accountAction';
 
 const defaultInput = {
   email: '',
@@ -12,6 +13,7 @@ const defaultInput = {
 };
 
 const login = () => {
+  const dispatch = useDispatch();
   const [isSignUp, setIsSignUp] = useState(false);
   const [input, setInput] = useState(defaultInput);
 
@@ -41,10 +43,11 @@ const login = () => {
     e.preventDefault();
     // sign up or sign in api call.
     if (isSignUp && passwordValidation()) {
-      createAccount(input);
+      dispatch(createAccount(input));
     }
     if (!isSignUp) {
-      signIn({ email: input.email, password: input.password });
+      const data = { email: input.email, password: input.password };
+      dispatch(regularSignIn(data));
     }
     setInput(defaultInput);
   };

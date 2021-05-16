@@ -8,7 +8,8 @@ const cocktailsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ALL_COCKTAILS:
       return {
-        cocktails: [...state.cocktails, ...action?.payload],
+        ...state,
+        ...action?.payload,
       };
 
     default:
